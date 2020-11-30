@@ -16,11 +16,11 @@ The command returns the link to the room, as well as a message marking all invit
 
 ## Adding the command to Mattermost
 
-- To add the command, follow [this] (https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command) guide, making sure you use the following settings:
--- Title: Meet
--- Description: Generate a Google Meet link to start a meeting
--- Command Trigger Word: meet
--- Request URL: http://127.0.0.1:5001
+- To add the command, follow the [custom slash command](https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command) guide, making sure you use the following settings:
+    - Title: Meet
+    - Description: Generate a Google Meet link to start a meeting
+    - Command Trigger Word: meet
+    - Request URL: http://127.0.0.1:5001
 - After creating the program, you will receive a `token`
 - Create a `.env` file inside` src` with the `MATTERMOST_TOKEN = <token>` field
 - Run `pip install pipenv` and then `pipenv install --system` 
