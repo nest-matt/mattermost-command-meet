@@ -1,21 +1,27 @@
 # mattermost-command-meet
 
-![screenshot](https://github.com/instruct-br/mattermost-command-meet/blob/main/screenshots/screenshot.jpg)
+! [screenshot] (https://github.com/nest-matt/mattermost-command-meet/blob/main/screenshots/screenshot.png)
 
-## Descrição
+## Description
 
-Essa API faz com que seja possível criar instantaneamente uma sala no **Google Meet** com o comando `/meet`.
+This API makes it possible to instantly create a room on **Google Meet** with the `/meet` command.
 
-O comando aceita o nome de uma sala como primeiro argumento, e uma lista de users para serem marcados como segundo argumento:
+The command accepts a list of users to be marked as part of the meeting:
 
-```
-/meet nome_da_sala @user1 @user2 @user3
-```
+``
+/meet @user1 @user2 @user3
+``
 
-O comando retorna o link da sala, assim como uma mensagem marcando todos os usuários convidados.
+The command returns the link to the room, as well as a message marking all invited users on the channel the posting user is in.
 
-## Adicionando o comando ao Mattermost
+## Adding the command to Mattermost
 
-- Para adicionar o comando, siga [este](https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command) guia.
-- Após criar o programa, você receberá um `token`
-- Crie um arquivo `.env` dentro de `src` com o campo `MATTERMOST_TOKEN=<token>`
+- To add the command, follow [this] (https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command) guide, making sure you use the following settings:
+-- Title: Meet
+-- Description: Generate a Google Meet link to start a meeting
+-- Command Trigger Word: meet
+-- Request URL: http://127.0.0.1:5001
+- After creating the program, you will receive a `token`
+- Create a `.env` file inside` src` with the `MATTERMOST_TOKEN = <token>` field
+- Run `pip install pipenv` and then `pipenv install --system` 
+- Start the application using the command `python3 wsgi.py &` from the `src/` directory

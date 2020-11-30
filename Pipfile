@@ -13,7 +13,7 @@ uvicorn = "*"
 python-decouple = "*"
 aiofiles = "*"
 python-multipart = "*"
-shortuuid = "*"
+coolname = "*"
 
 [requires]
 python_version = "3.6"
