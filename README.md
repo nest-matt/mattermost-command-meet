@@ -1,6 +1,6 @@
 # mattermost-command-meet
 
-! [screenshot] (https://github.com/nest-matt/mattermost-command-meet/blob/main/screenshots/screenshot.png)
+! [screenshot] (https://github.com/nest-matt/mattermost-command-meet/blob/tec/screenshots/screenshot.png)
 
 ## Description
 
