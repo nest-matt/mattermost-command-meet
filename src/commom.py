@@ -1,9 +1,7 @@
 import time
 from coolname import RandomGenerator
 
-
-def get_meeting_response(user: str, user_mentions: list, room_name: str) -> str:
-    generator = RandomGenerator({
+generator = RandomGenerator({
         'all': {
             'type': 'cartesian',
             'lists': ['first_word', 'second_word']
@@ -17,6 +15,8 @@ def get_meeting_response(user: str, user_mentions: list, room_name: str) -> str:
             'words': ['maverick', 'ant', 'heart', 'Energy Collective family member', 'personality']
         },
     })
+
+def get_meeting_response(user: str, user_mentions: list, room_name: str) -> str:
     tec_random = ' '.join(generator.generate())
     return f"""
 ##### @{user} the *{tec_random}* has started a meeting
